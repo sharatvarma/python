@@ -18,7 +18,8 @@ dictionary()
 
 
 
-''' 11.2
+'''
+11.2
 a = {1: 'sharat', 2: 'varma'}
 k = int(input("Enter the key :"))
 if k in a:
@@ -27,14 +28,20 @@ else:
     print(a.get(k, "No value for the key"))
 '''
 
-'''11.10
+'''
+11.10
 letter = 'Cheer'
 value = 7
+word_list = ''
 for i in letter:
     new = ord(i)
     new += value
     nice_char = chr(new)
     print(i, '=>', nice_char)
+
+    for x in nice_char:
+        word_list += x
+        print(word_list)
 '''
 
 
