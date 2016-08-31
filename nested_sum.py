@@ -71,7 +71,7 @@ def binarySearch():
             found = True
 
     if found:
-        print("The name is at position", middle_pos)
+        print("The name is at position", middle_pos, names)
     else:
         print("The name was not in the list.")
 
