@@ -1,6 +1,5 @@
-
-
-'''10.6
+'''
+#10.6
 def is_sorted(list1=[]):
     for i in list1:
         if list1[i] < list1[i+1]:
@@ -10,15 +9,15 @@ def is_sorted(list1=[]):
         else:
             print("Pass the parameters in the list")
 
-result = is_sorted([1, 2, 3])
-print(result)'''
-
-''' 10.8 -- 1
-
-s = ['sharat', 'chandra', 'sharat', 'chandra']
+result = is_sorted([3, 2, 3])
+print(result)
+'''
+# 10.8 -- 1
+'''
+s = ['sharat', 'sharat', 'sharat', 'kumar']
 for i in s:
     if s.count(i) > 1:
-        print('duplicate')
+        print(i, 'duplicate')
     else:
         print('No duplicate')
 
@@ -54,13 +53,34 @@ def read_write():
 read_write()'''
 
 
+def binarySearch():
+    names = ["Sharat", "varma", "chandra", "pakalapati", "murthy", "Venky",
+             "dan", "visu", "ram", "harish"]
+    names.sort()
+    name = input('What name are you looking for : ')
+    lower_bound = 0
+    upper_bound = len(names) - 1
+    found = False
+    while lower_bound <= upper_bound and not found:
+        middle_pos = (lower_bound+upper_bound) // 2
+        if names[middle_pos] < name:
+            lower_bound = middle_pos + 1
+        elif names[middle_pos] > name:
+            upper_bound = middle_pos - 1
+        else:
+            found = True
+
+    if found:
+        print("The name is at position", middle_pos)
+    else:
+        print("The name was not in the list.")
+
+print(binarySearch())
+
+
+
+
+
 # left -- 10.7 ,10.8(2),10.9,10.12,12.13
 #
 # Done -- 10.6,10.8(1),10.10,10.11
-
-
-
-
-
-
-
